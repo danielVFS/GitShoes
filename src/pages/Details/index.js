@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 export default function Details() {
   return (
     <View>
-      <Text>Details</Text>
+      <Text style={{marginTop: 50}}>Details</Text>
     </View>
   )
 }
