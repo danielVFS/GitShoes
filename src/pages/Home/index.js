@@ -1,10 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 import List from '../../components/List';
 
 export default function Home() {
+  const navigation = useNavigation();
+  
   return (
     <View style={styles.container}>  
       <View style={styles.header}>
@@ -33,28 +36,28 @@ export default function Home() {
         <Text style={[styles.text, {paddingLeft: 6}]}>LANÇAMENTOS</Text>
 
         <View style={styles.itensList}>
-          <List img={require("../../assets/1.png")} cost="R$259,90">
+          <List img={require("../../assets/1.png")} cost="R$259,90" onClick={() => navigation.navigate('Details')}>
             Nike Air Shock
           </List>
-          <List img={require("../../assets/2.png")} cost="R$289,90">
+          <List img={require("../../assets/2.png")} cost="R$289,90" onClick={() => alert(2)}>
             Nike Futemax
           </List>
         </View>
 
         <View style={styles.itensList}>
-          <List img={require("../../assets/3.png")} cost="R$139,90">
+          <List img={require("../../assets/3.png")} cost="R$139,90" onClick={() => alert(3)}>
             Adidas Dominator
           </List>
-          <List img={require("../../assets/4.png")} cost="R$350,90">
+          <List img={require("../../assets/4.png")} cost="R$350,90" onClick={() => alert(4)}>
             Adias paraguaio
           </List>
         </View>
 
         <View style={styles.itensList}>
-          <List img={require("../../assets/5.png")} cost="R$190,00">
+          <List img={require("../../assets/5.png")} cost="R$190,00" onClick={() => alert(5)}>
             Adidas Fender
           </List>
-          <List img={require("../../assets/6.png")} cost="R$215,99">
+          <List img={require("../../assets/6.png")} cost="R$215,99" onClick={() => alert(6)}>
             Adias ShowRunner
           </List>
         </View>
