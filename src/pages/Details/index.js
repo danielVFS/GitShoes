@@ -1,9 +1,10 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
 
 import Dot from '../../components/Dot';
 import SizeButton from '../../components/SizeButton';
 import Button from '../../components/Button';
+import Footer from '../../components/Footer';
 
 export default function Details({ navigation }) {
   navigation.setOptions({
@@ -61,7 +62,7 @@ export default function Details({ navigation }) {
 
         <View style={styles.line}/>
 
-
+        <Footer />
       </View>
     </ScrollView>
   )
