@@ -1,10 +1,72 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
 
-export default function Details() {
+import Dot from '../../components/Dot';
+
+export default function Details({ navigation }) {
+  navigation.setOptions({
+    headerTitle: 'Nike Shifter 10',
+  });
+
   return (
-    <View>
-      <Text style={{marginTop: 50}}>Details</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <Image 
+        source={require('../../assets/detail.png')}
+        style={styles.productImage}
+        resizeMode="cover"
+      />
+
+      <View>
+        <View>
+          <Text style={styles.productPrice}>R$290,00</Text>
+        </View>
+        <View opacity={0.4}>
+          <Text style={styles.productTitle}>Nike Shifter 10</Text>
+        </View>
+
+        <View style={styles.dotContainer}>
+          <Dot color="#2379f4" />
+          <Dot color="#fb5e55" />
+          <Dot color="#ddd" />
+          <Dot color="#000" />
+        </View>
+
+        <View style={styles.productSizeContainer}>
+          <ScrollView>
+            
+          </ScrollView>
+        </View>
+      
+      </View>
+    </ScrollView>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: "#FFF",
+  },
+  productImage: {
+    width: '100%',
+  },
+  productPrice: {
+    fontFamily: 'Anton_400Regular',
+    paddingHorizontal: '2%',
+    fontSize: 24,
+  },
+  productTitle: {
+    fontFamily: 'Anton_400Regular',
+    fontSize: 30,
+    paddingHorizontal: '2%',
+  },
+  dotContainer: {
+    flexDirection: 'row',
+    marginVertical: '7%',
+  },
+  productSizeContainer: {
+    flexDirection: 'row',
+    width: '100%',
+  }
+});
