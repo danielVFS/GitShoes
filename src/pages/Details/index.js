@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'rea
 
 import Dot from '../../components/Dot';
 import SizeButton from '../../components/SizeButton';
+import Button from '../../components/Button';
 
 export default function Details({ navigation }) {
   navigation.setOptions({
@@ -41,6 +42,26 @@ export default function Details({ navigation }) {
           </ScrollView>
         </View>
       
+        <View style={styles.productDescriptionContainer}>
+          <Text style={styles.productDescriptionTitle}>
+            Nike Shifter 10
+          </Text>
+          <Text style={styles.productDescriptionContent}>
+            Nike Shifter 10 is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning.
+          </Text>
+          <Text style={styles.productDescriptionSubContent}>
+            - Categoria: Amortecimento
+          </Text>
+          <Text style={styles.productDescriptionSubContent}>
+            - Material: Mash
+          </Text>
+        </View>
+      
+        <Button backgroundColor="#17181a" color="#FFF">Comprar</Button>
+
+        <View style={styles.line}/>
+
+
       </View>
     </ScrollView>
   )
@@ -72,5 +93,30 @@ const styles = StyleSheet.create({
   productSizeContainer: {
     flexDirection: 'row',
     width: '100%',
-  }
+  },
+  productDescriptionContainer: {
+    fontSize: 16,
+    lineHeight: 25,
+    marginVertical: '2%',
+    paddingHorizontal: '2%',
+  },
+  productDescriptionTitle: {
+    fontSize: 22,
+    marginVertical: '2%',
+    fontWeight: 'bold',
+  },
+  productDescriptionContent: {
+    fontSize: 16,
+    lineHeight: 25,
+    marginBottom: 10,
+  },
+  productDescriptionSubContent: {
+    fontSize: 16,
+    lineHeight: 25,
+  },
+  line: {
+    borderBottomColor: '#d8d8d8',
+    borderBottomWidth: 1,
+    marginVertical: '2%'
+  },
 });

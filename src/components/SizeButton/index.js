@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'rea
 export default function SizeButton({ boxColor, color, children }) {
   return (
    <View style={[styles.container, { backgroundColor: boxColor || '#FFF' }]}>
-     <Text style={[styles.BoxText, { color: color || "#c9c" }]}>
+     <Text style={[styles.BoxText, { color: color || "gray" }]}>
         { children }
      </Text>
    </View>
