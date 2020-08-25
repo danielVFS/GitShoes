@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
 
 import Dot from '../../components/Dot';
+import SizeButton from '../../components/SizeButton';
 
 export default function Details({ navigation }) {
   navigation.setOptions({
@@ -32,8 +33,11 @@ export default function Details({ navigation }) {
         </View>
 
         <View style={styles.productSizeContainer}>
-          <ScrollView>
-            
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <SizeButton boxColor="#17181a" color="#FFF">40</SizeButton>
+            <SizeButton>37</SizeButton>
+            <SizeButton>39</SizeButton>
+            <SizeButton>44</SizeButton>
           </ScrollView>
         </View>
       
